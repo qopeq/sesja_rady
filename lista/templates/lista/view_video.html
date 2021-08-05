@@ -1,0 +1,10 @@
+{% extends 'lista/base/base.html' %}
+{% load static %}
+
+{% block page_title %} {{ video_title}} {% endblock %}
+
+{% block content_block %} 
+    <video width="800" height="auto" controls>
+        <source src= "{% static  ''|add:video_link|add:'' %}", type="video/mp4">
+    </video>
+{% endblock %}

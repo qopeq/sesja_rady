@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page_title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'lista/styles/base.css' %}">
+    {% block css_block %}{% endblock %}
+</head>
+<body>
+    <a href="http://unislaw.pl"><img src="{% static 'lista/images/herb_unislaw.png' %}" alt="Herb Gminy Unisław, stojący, żółty pies na czerwonym tle" width="150" height="auto"></a>
+    <header>
+        <nav> <a class="header" href="/lista/" style="text-decoration: none" ><h1>Sesje Rady Gminy Unisław</h1></a></nav>
+        <h2>{%block second_header %}{% endblock %}</h2>
+    </header>
+    {% block content_block %} {% endblock %}
+</body>
+</html>

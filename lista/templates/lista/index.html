@@ -1,0 +1,16 @@
+{% extends 'lista/base/base.html' %}
+
+{% load static %}
+
+{% block page_title %} Sesje Rady Gminy Unisław {% endblock %}
+
+
+
+{% block content_block %}
+    <div>
+            {% for video in videos %}
+                <a href="/{{ video.id }}"> {{video.title}} </a>
+                <br> <br>
+            {% endfor %}
+    </div>    
+{% endblock %}
